@@ -25,5 +25,5 @@
     <string name="attribution">Photo on <xliff:g id="blossom_name">Blossom</xliff:g></string>
     <string name="action_view_profile">View <xliff:g id="user_name" example="ilake">%s</xliff:g>\'s profile</string>
     <string name="action_visit_blossom">Visit <xliff:g id="blossom_name">Blossom</xliff:g></string>
-    <string name="blossom_link" translatable="false">https://unsplash.com/</string>
+    <string name="blossom_link" translatable="false">https://calyxos.gitlab.io/wallpapers/</string>
 </resources>
