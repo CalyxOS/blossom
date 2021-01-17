@@ -50,7 +50,7 @@ class UnsplashExampleWorker(
 
     override fun doWork(): Result {
         val photos = try {
-            UnsplashService.popularPhotos()
+            UnsplashService.wallPapers()
         } catch (e: IOException) {
             Log.w(TAG, "Error reading Unsplash response", e)
             return Result.retry()
