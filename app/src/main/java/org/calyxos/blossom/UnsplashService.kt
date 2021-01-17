@@ -32,17 +32,17 @@ internal interface UnsplashService {
 
         private fun createService() : UnsplashService {
             val okHttpClient = OkHttpClient.Builder()
-                    .addInterceptor { chain ->
+                    /*.addInterceptor { chain ->
                         var request = chain.request()
                         val url = request.url().newBuilder()
                                 .addQueryParameter("client_id", CONSUMER_KEY).build()
                         request = request.newBuilder().url(url).build()
                         chain.proceed(request)
-                    }
+                    }*/ //Interceptor not needed
                     .build()
 
             val retrofit = Retrofit.Builder()
-                    .baseUrl("https://api.unsplash.com/")
+                    .baseUrl("https://calyxos.gitlab.io/")/*.baseUrl("https://api.unsplash.com/")*/
                     .client(okHttpClient)
                     .addConverterFactory(MoshiConverterFactory.create())
                     .build()
@@ -51,22 +51,16 @@ internal interface UnsplashService {
         }
 
         @Throws(IOException::class)
-        internal fun popularPhotos(): List<Photo> {
-            return createService().popularPhotos.execute().body()
+        internal fun wallPapers(): List<Photo> {
+            return createService().wallPapers.execute().body()
                     ?: throw IOException("Response was null")
-        }
-
-        @Throws(IOException::class)
-        internal fun trackDownload(photoId: String) {
-            createService().trackDownload(photoId).execute()
         }
     }
 
-    @get:GET("photos?order_by=popular&per_page=30")
-    val popularPhotos: Call<List<Photo>>
-
-    @GET("photos/{id}/download")
-    fun trackDownload(@Path("id") photoId: String) : Call<Any>
+    /*@get:GET("photos?order_by=popular&per_page=30")
+    val popularPhotos: Call<List<Photo>>*/
+    @get:GET("wallpapers/photos/index.json")
+    val wallPapers: Call<List<Photo>>
 
     data class Photo(
             val id: String,
