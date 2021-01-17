@@ -32,16 +32,10 @@ internal interface BlossomService {
 
         private fun createService() : BlossomService {
             val okHttpClient = OkHttpClient.Builder()
-                    .addInterceptor { chain ->
-                        var request = chain.request()
-                        val url = request.url().newBuilder().build()
-                        request = request.newBuilder().url(url).build()
-                        chain.proceed(request)
-                    }
                     .build()
 
             val retrofit = Retrofit.Builder()
-                    .baseUrl("https://api.unsplash.com/")
+                    .baseUrl("https://calyxos.gitlab.io/wallpapers/")
                     .client(okHttpClient)
                     .addConverterFactory(MoshiConverterFactory.create())
                     .build()
@@ -56,7 +50,7 @@ internal interface BlossomService {
         }
     }
 
-    @get:GET("photos?order_by=popular&per_page=30")
+    @get:GET("photos/index.json")
     val wallPapers: Call<List<Photo>>
 
     data class Photo(
