@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0ba47a99_b185ff62",
+        "filename": "build.gradle",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-18T15:32:39Z",
+      "side": 1,
+      "message": "Ah yeah gotcha, since I just imported the example folder without considering the root level build.gradle.\n\nMakes sense, and yeah that\u0027s what I\u0027d do as well, make sure it works and then remove it.",
+      "parentUuid": "15e4deab_d13ae180",
+      "revId": "bba24aeeeaf0209564626c4ec699615bc501bedb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9ed828d9_7ec186e4",
         "filename": "src/main/java/com/example/muzei/unsplash/UnsplashService.kt",
         "patchSetId": 2
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Okay. Yes.\n\nI just inserted the URL as it was. It fetches a bunch of wallpapers to display, right? Or does it fetch one at a time?\n\nI\u0027ll just add another method to fetch a particular wallpaper based on id supplied.",
       "parentUuid": "9ed828d9_7ec186e4",
+      "revId": "bba24aeeeaf0209564626c4ec699615bc501bedb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "da8ee740_ab3d628e",
+        "filename": "src/main/java/com/example/muzei/unsplash/UnsplashService.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-18T15:32:39Z",
+      "side": 1,
+      "message": "`trackDownload()` is called from openFile() - https://api.muzei.co/reference/com.google.android.apps.muzei.api.provider/-muzei-art-provider/open-file.html\n\nSo that just fetches one at a time.\n\nI think we the full url from the json would be what we want.\n\nLooking at https://unsplash.com/documentation#photos - it says download is the download location of the photo.",
+      "parentUuid": "fceeb5f4_879cfac2",
       "revId": "bba24aeeeaf0209564626c4ec699615bc501bedb",
       "serverId": "35266860-6252-469c-a67d-185064479fc0",
       "unresolved": true
