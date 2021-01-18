@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "15e4deab_d13ae180",
+        "filename": "build.gradle",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2021-01-18T15:15:43Z",
+      "side": 1,
+      "message": "Okay so this is a different gradle build file that was missing in the very first commit.I had to go to the github page of the Unsplash to get it and include. Without it it wouldn\u0027t build.\n\nI will remove the unused dependencies though. Just wanted to be sure of what was working first.\n\nStill getting used to the workflow.",
+      "parentUuid": "895fe297_2bd26c12",
+      "revId": "bba24aeeeaf0209564626c4ec699615bc501bedb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9ed828d9_7ec186e4",
         "filename": "src/main/java/com/example/muzei/unsplash/UnsplashService.kt",
         "patchSetId": 2
