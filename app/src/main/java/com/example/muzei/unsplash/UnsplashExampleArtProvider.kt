@@ -76,13 +76,6 @@ class UnsplashExampleArtProvider : MuzeiArtProvider() {
 
     override fun openFile(artwork: Artwork): InputStream {
         return super.openFile(artwork).also {
-            artwork.token?.run {
-                try {
-                    UnsplashService.trackDownload(this)
-                } catch (e: IOException) {
-                    Log.w(TAG, "Error reporting download to Unsplash", e)
-                }
-            }
         }
     }
 }
