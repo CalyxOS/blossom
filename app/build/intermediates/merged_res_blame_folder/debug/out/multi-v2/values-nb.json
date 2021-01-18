@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/mnt/golu/android/calyx/other.repos/blossom/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-nb/values-nb.xml",
+            "map": [
+                {
+                    "source": "/home/cdesai/.gradle/caches/transforms-2/files-2.1/f1a4a7bd020b269d081a2a042c143654/core-1.5.0-beta01/res/values-nb/values-nb.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

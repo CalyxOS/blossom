@@ -1,0 +1,2 @@
+com/example/muzei/unsplash/BuildConfig.java
+ com.example.muzei.unsplash.BuildConfig

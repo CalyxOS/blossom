@@ -1,0 +1,4 @@
+#Tue Jan 19 01:09:58 IST 2021
+base.0=/mnt/golu/android/calyx/other.repos/blossom/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
