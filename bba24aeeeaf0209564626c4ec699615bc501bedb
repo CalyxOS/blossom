@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "895fe297_2bd26c12",
+        "filename": "build.gradle",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-18T14:05:20Z",
+      "side": 1,
+      "message": "Why did you change this file? Most of these seem unused, and we specifically don\u0027t want to add any dependencies on play services or firebase or so on.",
+      "revId": "bba24aeeeaf0209564626c4ec699615bc501bedb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9ed828d9_7ec186e4",
+        "filename": "src/main/java/com/example/muzei/unsplash/UnsplashService.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-18T14:05:20Z",
+      "side": 1,
+      "message": "Need to double check / test, but https://calyxos.gitlab.io/wallpapers/photos/xipeb-nedup-magek-kyles/index.json should work here I think.\n\nSo \"wallpapers/photos/{id}/index.json\"",
+      "revId": "bba24aeeeaf0209564626c4ec699615bc501bedb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    }
+  ]
+}
