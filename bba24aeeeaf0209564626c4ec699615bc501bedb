@@ -105,6 +105,24 @@
       "revId": "bba24aeeeaf0209564626c4ec699615bc501bedb",
       "serverId": "35266860-6252-469c-a67d-185064479fc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "14190c75_a909655a",
+        "filename": "src/main/java/com/example/muzei/unsplash/UnsplashService.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-18T15:46:36Z",
+      "side": 1,
+      "message": "Actually, we don\u0027t need this at all.\n\nSee: https://help.unsplash.com/en/articles/2511258-guideline-triggering-a-download\n\n\u003e Note: this is purely an event endpoint used to increment the number of downloads a photo has. You can think of it very similarly to the pageview event in Google Analytics—where you’re incrementing a counter on the backend. The download_location is not to be used to embed the photo (use the photo.urls.* properties instead) or to direct the user downloading the photo to (use the photo.urls.full for that instead).",
+      "parentUuid": "da8ee740_ab3d628e",
+      "revId": "bba24aeeeaf0209564626c4ec699615bc501bedb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": false
     }
   ]
 }
