@@ -51,6 +51,24 @@
       "revId": "bba24aeeeaf0209564626c4ec699615bc501bedb",
       "serverId": "35266860-6252-469c-a67d-185064479fc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fceeb5f4_879cfac2",
+        "filename": "src/main/java/com/example/muzei/unsplash/UnsplashService.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2021-01-18T15:22:04Z",
+      "side": 1,
+      "message": "Okay. Yes.\n\nI just inserted the URL as it was. It fetches a bunch of wallpapers to display, right? Or does it fetch one at a time?\n\nI\u0027ll just add another method to fetch a particular wallpaper based on id supplied.",
+      "parentUuid": "9ed828d9_7ec186e4",
+      "revId": "bba24aeeeaf0209564626c4ec699615bc501bedb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
     }
   ]
 }
