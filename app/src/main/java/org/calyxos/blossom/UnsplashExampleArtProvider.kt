@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.muzei.unsplash
+package org.calyxos.blossom
 
 import android.app.PendingIntent
 import android.content.Context
