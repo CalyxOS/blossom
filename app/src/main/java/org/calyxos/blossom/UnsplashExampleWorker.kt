@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.muzei.unsplash
+package org.calyxos.blossom
 
 import android.content.Context
 import android.util.Log
@@ -25,7 +25,7 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.Worker
 import androidx.work.WorkerParameters
-import com.example.muzei.unsplash.BuildConfig.UNSPLASH_AUTHORITY
+import org.calyxos.blossom.BuildConfig.UNSPLASH_AUTHORITY
 import com.google.android.apps.muzei.api.provider.Artwork
 import com.google.android.apps.muzei.api.provider.ProviderContract
 import java.io.IOException
