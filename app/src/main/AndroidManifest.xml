@@ -17,7 +17,7 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.muzei.unsplash">
+    package="org.calyxos.blossom">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -41,7 +41,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <service
-            android:name="com.example.muzei.unsplash.UnsplashExampleArtSource"
+            android:name="org.calyxos.blossom.UnsplashExampleArtSource"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.apps.muzei.api.MuzeiArtSource"/>
@@ -52,7 +52,7 @@
         </service>
 
         <provider
-            android:name="com.example.muzei.unsplash.UnsplashExampleArtProvider"
+            android:name="org.calyxos.blossom.UnsplashExampleArtProvider"
             android:authorities="${unsplashAuthority}"
             android:label="@string/name"
             android:description="@string/description"

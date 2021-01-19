@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.muzei.unsplash
+package org.calyxos.blossom
 
 import androidx.core.net.toUri
 import okhttp3.OkHttpClient
