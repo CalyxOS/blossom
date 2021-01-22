@@ -25,24 +25,25 @@ import retrofit2.create
 import retrofit2.http.GET
 import retrofit2.http.Path
 import java.io.IOException
+import kotlin.jvm.Throws
 
-internal interface UnsplashService {
+internal interface BlossomService {
 
     companion object {
 
-        private fun createService() : UnsplashService {
+        private fun createService() : BlossomService {
             val okHttpClient = OkHttpClient.Builder()
-                    .addInterceptor { chain ->
+                    /*.addInterceptor { chain ->
                         var request = chain.request()
                         val url = request.url().newBuilder()
                                 .addQueryParameter("client_id", CONSUMER_KEY).build()
                         request = request.newBuilder().url(url).build()
                         chain.proceed(request)
-                    }
+                    }*/ //Interceptor not needed
                     .build()
 
             val retrofit = Retrofit.Builder()
-                    .baseUrl("https://api.unsplash.com/")
+                    .baseUrl("https://calyxos.gitlab.io/")/*.baseUrl("https://api.unsplash.com/")*/
                     .client(okHttpClient)
                     .addConverterFactory(MoshiConverterFactory.create())
                     .build()
@@ -51,8 +52,8 @@ internal interface UnsplashService {
         }
 
         @Throws(IOException::class)
-        internal fun popularPhotos(): List<Photo> {
-            return createService().popularPhotos.execute().body()
+        internal fun wallPapers(): List<Photo> {
+            return createService().wallPapers.execute().body()
                     ?: throw IOException("Response was null")
         }
 
@@ -62,10 +63,15 @@ internal interface UnsplashService {
         }
     }
 
-    @get:GET("photos?order_by=popular&per_page=30")
-    val popularPhotos: Call<List<Photo>>
+    /*@get:GET("photos?order_by=popular&per_page=30")
+    val popularPhotos: Call<List<Photo>>*/
+    @get:GET("wallpapers/photos/index.json")
+    val wallPapers: Call<List<Photo>>
 
-    @GET("photos/{id}/download")
+    /*@GET("photos/{id}/download")
+    fun trackDownload(@Path("id") photoId: String) : Call<Any>*/
+
+    @GET("wallpapers/photos/{id}/index.json")
     fun trackDownload(@Path("id") photoId: String) : Call<Any>
 
     data class Photo(
