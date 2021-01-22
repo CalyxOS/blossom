@@ -28,22 +28,22 @@ import com.google.android.apps.muzei.api.provider.MuzeiArtProvider
 import java.io.IOException
 import java.io.InputStream
 
-class UnsplashExampleArtProvider : MuzeiArtProvider() {
+class BlossomArtProvider : MuzeiArtProvider() {
 
     companion object {
-        private const val TAG = "UnsplashExample"
+        private const val TAG = "Blossom"
     }
 
     override fun onLoadRequested(initial: Boolean) {
         val context = context ?: return
-        UnsplashExampleWorker.enqueueLoad(context)
+        BlossomWorker.enqueueLoad(context)
     }
 
     override fun getCommandActions(artwork: Artwork): List<RemoteActionCompat> {
         val context = context ?: return super.getCommandActions(artwork)
         return listOfNotNull(
                 createViewProfileAction(context, artwork),
-                createVisitUnsplashAction(context))
+                createVisitBlossomAction(context))
     }
 
     private fun createViewProfileAction(context: Context, artwork: Artwork): RemoteActionCompat? {
@@ -58,11 +58,11 @@ class UnsplashExampleArtProvider : MuzeiArtProvider() {
                         PendingIntent.FLAG_UPDATE_CURRENT))
     }
 
-    private fun createVisitUnsplashAction(context: Context): RemoteActionCompat {
-        val title = context.getString(R.string.action_visit_unsplash)
-        val unsplashUri = context.getString(R.string.unsplash_link) +
+    private fun createVisitBlossomAction(context: Context): RemoteActionCompat {
+        val title = context.getString(R.string.action_visit_blossom)
+        val blossomUri = context.getString(R.string.blossom_link) +
             ATTRIBUTION_QUERY_PARAMETERS
-        val intent = Intent(Intent.ACTION_VIEW, unsplashUri.toUri())
+        val intent = Intent(Intent.ACTION_VIEW, blossomUri.toUri())
         return RemoteActionCompat(
                 IconCompat.createWithResource(context,
                         com.google.android.apps.muzei.api.R.drawable.muzei_launch_command),
@@ -78,9 +78,9 @@ class UnsplashExampleArtProvider : MuzeiArtProvider() {
         return super.openFile(artwork).also {
             artwork.token?.run {
                 try {
-                    UnsplashService.trackDownload(this)
+                    BlossomService.trackDownload(this)
                 } catch (e: IOException) {
-                    Log.w(TAG, "Error reporting download to Unsplash", e)
+                    Log.w(TAG, "Error reporting download to Blossom", e)
                 }
             }
         }

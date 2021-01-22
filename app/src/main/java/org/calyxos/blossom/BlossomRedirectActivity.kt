@@ -27,15 +27,15 @@ import com.google.android.apps.muzei.api.MuzeiContract
 
 /**
  * This activity's sole purpose is to redirect users to Muzei, which is where they should
- * activate Muzei and then select the Unsplash source.
+ * activate Muzei and then select the Blossom source.
  *
  * You'll note the usage of the `enable_launcher` boolean resource value to only enable
  * this on API 29+ devices as it is on API 29+ that a launcher icon becomes mandatory for
  * every app.
  */
-class UnsplashRedirectActivity : ComponentActivity() {
+class BlossomRedirectActivity : ComponentActivity() {
     companion object {
-        private const val TAG = "UnsplashRedirect"
+        private const val TAG = "BlossomRedirect"
         private const val MUZEI_PACKAGE_NAME = "net.nurik.roman.muzei"
         private const val PLAY_STORE_LINK = "https://play.google.com/store/apps/details?id=$MUZEI_PACKAGE_NAME"
     }
@@ -49,9 +49,9 @@ class UnsplashRedirectActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // First check whether Unsplash is already selected
+        // First check whether Blossom is already selected
         val launchIntent = packageManager.getLaunchIntentForPackage(MUZEI_PACKAGE_NAME)
-        if (MuzeiContract.Sources.isProviderSelected(this, BuildConfig.UNSPLASH_AUTHORITY)
+        if (MuzeiContract.Sources.isProviderSelected(this, BuildConfig.BLOSSOM_AUTHORITY)
                 && launchIntent != null) {
             // Already selected so just open Muzei
             requestLauncher.launch(launchIntent)
@@ -60,10 +60,10 @@ class UnsplashRedirectActivity : ComponentActivity() {
         // Build the list of Intents plus the Toast message that should be displayed
         // to users when we successfully launch one of the Intents
         val intents = listOf(
-                MuzeiContract.Sources.createChooseProviderIntent(BuildConfig.UNSPLASH_AUTHORITY)
-                        to R.string.toast_enable_unsplash,
+                MuzeiContract.Sources.createChooseProviderIntent(BuildConfig.BLOSSOM_AUTHORITY)
+                        to R.string.toast_enable_blossom,
                 launchIntent
-                        to R.string.toast_enable_unsplash_source,
+                        to R.string.toast_enable_blossom_source,
                 Intent(Intent.ACTION_VIEW).setData(Uri.parse(PLAY_STORE_LINK))
                         to R.string.toast_muzei_missing_error)
         // Go through each Intent/message pair, trying each in turn

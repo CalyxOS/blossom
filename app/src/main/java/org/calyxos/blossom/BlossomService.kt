@@ -26,11 +26,11 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import java.io.IOException
 
-internal interface UnsplashService {
+internal interface BlossomService {
 
     companion object {
 
-        private fun createService() : UnsplashService {
+        private fun createService() : BlossomService {
             val okHttpClient = OkHttpClient.Builder()
                     .addInterceptor { chain ->
                         var request = chain.request()
@@ -51,8 +51,8 @@ internal interface UnsplashService {
         }
 
         @Throws(IOException::class)
-        internal fun popularPhotos(): List<Photo> {
-            return createService().popularPhotos.execute().body()
+        internal fun wallPapers(): List<Photo> {
+            return createService().wallPapers.execute().body()
                     ?: throw IOException("Response was null")
         }
 
@@ -63,7 +63,7 @@ internal interface UnsplashService {
     }
 
     @get:GET("photos?order_by=popular&per_page=30")
-    val popularPhotos: Call<List<Photo>>
+    val wallPapers: Call<List<Photo>>
 
     @GET("photos/{id}/download")
     fun trackDownload(@Path("id") photoId: String) : Call<Any>

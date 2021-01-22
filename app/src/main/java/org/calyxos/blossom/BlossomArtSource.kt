@@ -22,8 +22,8 @@ import android.os.Binder
 
 /**
  * This class is kept only to serve as a tombstone to Muzei to know to replace it
- * with [UnsplashExampleArtProvider].
+ * with [BlossomArtProvider].
  */
-class UnsplashExampleArtSource : Service() {
+class BlossomArtSource : Service() {
     override fun onBind(intent: Intent?): Binder? = null
 }

@@ -28,32 +28,32 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity-alias
-            android:name=".UnsplashLauncherActivity"
+            android:name=".BlossomLauncherActivity"
             android:enabled="@bool/enable_launcher"
-            android:targetActivity=".UnsplashRedirectActivity">
+            android:targetActivity=".BlossomRedirectActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity-alias>
         <activity
-            android:name=".UnsplashRedirectActivity"
+            android:name=".BlossomRedirectActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <service
-            android:name="org.calyxos.blossom.UnsplashExampleArtSource"
+            android:name="org.calyxos.blossom.BlossomArtSource"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.apps.muzei.api.MuzeiArtSource"/>
             </intent-filter>
             <meta-data
                 android:name="replacement"
-                android:value="${unsplashAuthority}"/>
+                android:value="${blossomAuthority}"/>
         </service>
 
         <provider
-            android:name="org.calyxos.blossom.UnsplashExampleArtProvider"
-            android:authorities="${unsplashAuthority}"
+            android:name="org.calyxos.blossom.BlossomArtProvider"
+            android:authorities="${blossomAuthority}"
             android:label="@string/name"
             android:description="@string/description"
             android:exported="true"
@@ -65,7 +65,7 @@
 
         <provider
             android:name="com.google.android.apps.muzei.api.provider.MuzeiArtDocumentsProvider"
-            android:authorities="${unsplashAuthority}.documents"
+            android:authorities="${blossomAuthority}.documents"
             android:exported="true"
             android:grantUriPermissions="true"
             android:permission="android.permission.MANAGE_DOCUMENTS">

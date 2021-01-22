@@ -35,9 +35,9 @@ android {
         minSdkVersion 19
         targetSdkVersion rootProject.ext.targetSdkVersion
 
-        def unsplashAuthorityValue = "com.example.muzei.exampleunsplash"
-        manifestPlaceholders = [unsplashAuthority: unsplashAuthorityValue]
-        buildConfigField "String", "UNSPLASH_AUTHORITY", "\"${unsplashAuthorityValue}\""
+        def blossomAuthorityValue = "org.calyxos.blossom"
+        manifestPlaceholders = [blossomAuthority: blossomAuthorityValue]
+        buildConfigField "String", "BLOSSOM_AUTHORITY", "\"${blossomAuthorityValue}\""
     }
 
     compileOptions {

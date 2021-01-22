@@ -15,15 +15,15 @@
   -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name"><xliff:g id="unsplash_name">Unsplash</xliff:g> (Example <xliff:g id="muzei_name">Muzei</xliff:g> Source)</string>
-    <string name="toast_enable_unsplash">Select <xliff:g id="unsplash_name">Unsplash</xliff:g> in <xliff:g id="muzei_name">Muzei</xliff:g></string>
-    <string name="toast_enable_unsplash_source">Select <xliff:g id="unsplash_name">Unsplash</xliff:g> from the list of Sources in <xliff:g id="muzei_name">Muzei</xliff:g></string>
+    <string name="app_name"><xliff:g id="blossom_name">Blossom</xliff:g> <xliff:g id="muzei_name">Muzei</xliff:g> Source</string>
+    <string name="toast_enable_blossom">Select <xliff:g id="blossom_name">Blossom</xliff:g> in <xliff:g id="muzei_name">Muzei</xliff:g></string>
+    <string name="toast_enable_blossom_source">Select <xliff:g id="blossom_name">Blossom</xliff:g> from the list of Sources in <xliff:g id="muzei_name">Muzei</xliff:g></string>
     <string name="toast_muzei_missing_error">You must install <xliff:g id="muzei_name">Muzei</xliff:g> to use this Source</string>
     <string name="toast_play_store_missing_error">Could not install <xliff:g id="muzei_name">Muzei</xliff:g> from the <xliff:g id="google_play">Google Play</xliff:g> Store</string>
-    <string name="name"><xliff:g id="unsplash_name">Unsplash</xliff:g> (Example)</string>
-    <string name="description">Popular photos from <xliff:g id="unsplash_name">Unsplash</xliff:g></string>
-    <string name="attribution">Photo on <xliff:g id="unsplash_name">Unsplash</xliff:g></string>
+    <string name="name"><xliff:g id="blossom_name">Blossom</xliff:g></string>
+    <string name="description">Photos from <xliff:g id="blossom_name">Blossom</xliff:g></string>
+    <string name="attribution">Photo on <xliff:g id="blossom_name">Blossom</xliff:g></string>
     <string name="action_view_profile">View <xliff:g id="user_name" example="ilake">%s</xliff:g>\'s profile</string>
-    <string name="action_visit_unsplash">Visit <xliff:g id="unsplash_name">Unsplash</xliff:g></string>
-    <string name="unsplash_link" translatable="false">https://unsplash.com/</string>
+    <string name="action_visit_blossom">Visit <xliff:g id="blossom_name">Blossom</xliff:g></string>
+    <string name="blossom_link" translatable="false">https://unsplash.com/</string>
 </resources>
