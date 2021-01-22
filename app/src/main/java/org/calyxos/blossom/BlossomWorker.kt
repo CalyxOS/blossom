@@ -25,22 +25,22 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.Worker
 import androidx.work.WorkerParameters
-import org.calyxos.blossom.BuildConfig.UNSPLASH_AUTHORITY
+import org.calyxos.blossom.BuildConfig.BLOSSOM_AUTHORITY
 import com.google.android.apps.muzei.api.provider.Artwork
 import com.google.android.apps.muzei.api.provider.ProviderContract
 import java.io.IOException
 
-class UnsplashExampleWorker(
+class BlossomWorker(
         context: Context,
         workerParams: WorkerParameters
 ) : Worker(context, workerParams) {
 
     companion object {
-        private const val TAG = "UnsplashExample"
+        private const val TAG = "Blossom"
 
         internal fun enqueueLoad(context: Context) {
             val workManager = WorkManager.getInstance(context)
-            workManager.enqueue(OneTimeWorkRequestBuilder<UnsplashExampleWorker>()
+            workManager.enqueue(OneTimeWorkRequestBuilder<BlossomWorker>()
                     .setConstraints(Constraints.Builder()
                             .setRequiredNetworkType(NetworkType.CONNECTED)
                             .build())
@@ -49,22 +49,22 @@ class UnsplashExampleWorker(
     }
 
     override fun doWork(): Result {
-        val photos = try {
-            UnsplashService.popularPhotos()
+        val wallPapers = try {
+            BlossomService.wallPapers()
         } catch (e: IOException) {
-            Log.w(TAG, "Error reading Unsplash response", e)
+            Log.w(TAG, "Error reading Blossom response", e)
             return Result.retry()
         }
 
-        if (photos.isEmpty()) {
+        if (wallPapers.isEmpty()) {
             Log.w(TAG, "No photos returned from API.")
             return Result.failure()
         }
 
         val providerClient = ProviderContract.getProviderClient(
-                applicationContext, UNSPLASH_AUTHORITY)
+                applicationContext, BLOSSOM_AUTHORITY)
         val attributionString = applicationContext.getString(R.string.attribution)
-        providerClient.addArtwork(photos.map { photo ->
+        providerClient.addArtwork(wallPapers.map { photo ->
             Artwork(
                     token = photo.id,
                     title = photo.description ?: attributionString,
