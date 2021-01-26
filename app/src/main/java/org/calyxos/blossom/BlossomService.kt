@@ -34,8 +34,7 @@ internal interface BlossomService {
             val okHttpClient = OkHttpClient.Builder()
                     .addInterceptor { chain ->
                         var request = chain.request()
-                        val url = request.url().newBuilder()
-                                .addQueryParameter("client_id", CONSUMER_KEY).build()
+                        val url = request.url().newBuilder().build()
                         request = request.newBuilder().url(url).build()
                         chain.proceed(request)
                     }
@@ -55,18 +54,10 @@ internal interface BlossomService {
             return createService().wallPapers.execute().body()
                     ?: throw IOException("Response was null")
         }
-
-        @Throws(IOException::class)
-        internal fun trackDownload(photoId: String) {
-            createService().trackDownload(photoId).execute()
-        }
     }
 
     @get:GET("photos?order_by=popular&per_page=30")
     val wallPapers: Call<List<Photo>>
-
-    @GET("photos/{id}/download")
-    fun trackDownload(@Path("id") photoId: String) : Call<Any>
 
     data class Photo(
             val id: String,
@@ -78,7 +69,7 @@ internal interface BlossomService {
     data class Urls(val full: String)
 
     data class Links(val html: String) {
-        val webUri get() = "$html$ATTRIBUTION_QUERY_PARAMETERS".toUri()
+        val webUri get() = "$html".toUri()
     }
 
     data class User(

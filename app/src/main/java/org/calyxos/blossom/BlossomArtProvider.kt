@@ -60,8 +60,7 @@ class BlossomArtProvider : MuzeiArtProvider() {
 
     private fun createVisitBlossomAction(context: Context): RemoteActionCompat {
         val title = context.getString(R.string.action_visit_blossom)
-        val blossomUri = context.getString(R.string.blossom_link) +
-            ATTRIBUTION_QUERY_PARAMETERS
+        val blossomUri = context.getString(R.string.blossom_link)
         val intent = Intent(Intent.ACTION_VIEW, blossomUri.toUri())
         return RemoteActionCompat(
                 IconCompat.createWithResource(context,
@@ -75,14 +74,6 @@ class BlossomArtProvider : MuzeiArtProvider() {
     }
 
     override fun openFile(artwork: Artwork): InputStream {
-        return super.openFile(artwork).also {
-            artwork.token?.run {
-                try {
-                    BlossomService.trackDownload(this)
-                } catch (e: IOException) {
-                    Log.w(TAG, "Error reporting download to Blossom", e)
-                }
-            }
-        }
+        return super.openFile(artwork)
     }
 }
