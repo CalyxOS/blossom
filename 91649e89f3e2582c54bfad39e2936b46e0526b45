@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "185ef4c3_bffd1249",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-26T16:00:12Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5e98f166_cf915f3d",
+      "revId": "91649e89f3e2582c54bfad39e2936b46e0526b45",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e2cc78a8_f4a94690",
         "filename": "app/src/main/AndroidManifest.xml",
         "patchSetId": 1
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "dab76e14_589d9374",
+        "filename": "app/src/main/AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-26T16:00:12Z",
+      "side": 1,
+      "message": "That\u0027s fine though, since we\u0027re shipping both Muzei and Blossom by default - that way users only have one app to open rather than two, and it\u0027s also easier for us.",
+      "parentUuid": "2aa78f6b_6ebfd060",
+      "revId": "91649e89f3e2582c54bfad39e2936b46e0526b45",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "96cef2ae_e7b58534",
         "filename": "gradle/wrapper/gradle-wrapper.properties",
         "patchSetId": 1
@@ -104,6 +140,24 @@
       "revId": "91649e89f3e2582c54bfad39e2936b46e0526b45",
       "serverId": "35266860-6252-469c-a67d-185064479fc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b3103763_cbb4df7d",
+        "filename": "gradle/wrapper/gradle-wrapper.properties",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-26T16:00:12Z",
+      "side": 1,
+      "message": "Yeah, I think if you sync after the changes and try opening it again Studio will ask if you want to keep the sha256 or remove and if you just say keep it then it should be fine.",
+      "parentUuid": "9e00239d_de01fc81",
+      "revId": "91649e89f3e2582c54bfad39e2936b46e0526b45",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": false
     }
   ]
 }
