@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "2aa78f6b_6ebfd060",
+        "filename": "app/src/main/AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2021-01-26T15:51:39Z",
+      "side": 1,
+      "message": "Okay. That means it won\u0027t show up any icons again I think. Users will only know about it from Muzei or Settings --\u003e Apps",
+      "parentUuid": "e2cc78a8_f4a94690",
+      "revId": "91649e89f3e2582c54bfad39e2936b46e0526b45",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "96cef2ae_e7b58534",
         "filename": "gradle/wrapper/gradle-wrapper.properties",
         "patchSetId": 1
