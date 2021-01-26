@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e2c865d6_60eee2ea",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-26T13:43:37Z",
+      "side": 1,
+      "message": "With the way gerrit works, if you had kept the same Change-Id as https://review.calyxos.org/c/CalyxOS/blossom/+/2263 - that would\u0027ve just updated that change, instead of creating a new change.",
+      "revId": "91649e89f3e2582c54bfad39e2936b46e0526b45",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e2cc78a8_f4a94690",
+        "filename": "app/src/main/AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-26T13:43:37Z",
+      "side": 1,
+      "message": "We can just remove the activity altogether, and just have it always usable from muzei.",
+      "revId": "91649e89f3e2582c54bfad39e2936b46e0526b45",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "96cef2ae_e7b58534",
+        "filename": "gradle/wrapper/gradle-wrapper.properties",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-26T13:43:37Z",
+      "side": 1,
+      "message": "We should keep the sha256. I\u0027m guessing Android Studio changed this, you can ask it not to, it prompts you.",
+      "revId": "91649e89f3e2582c54bfad39e2936b46e0526b45",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
+    }
+  ]
+}
