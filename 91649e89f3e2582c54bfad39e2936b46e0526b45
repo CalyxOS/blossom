@@ -86,6 +86,24 @@
       "revId": "91649e89f3e2582c54bfad39e2936b46e0526b45",
       "serverId": "35266860-6252-469c-a67d-185064479fc0",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9e00239d_de01fc81",
+        "filename": "gradle/wrapper/gradle-wrapper.properties",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2021-01-26T15:54:38Z",
+      "side": 1,
+      "message": "Okay. It was giving an error or warning in my version of Android Studio.\nBut I\u0027m sure there is a solution to that",
+      "parentUuid": "96cef2ae_e7b58534",
+      "revId": "91649e89f3e2582c54bfad39e2936b46e0526b45",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0",
+      "unresolved": true
     }
   ]
 }
