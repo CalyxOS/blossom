@@ -43,7 +43,7 @@ class BlossomArtProvider : MuzeiArtProvider() {
         val context = context ?: return super.getCommandActions(artwork)
         return listOfNotNull(
                 createViewProfileAction(context, artwork),
-                createVisitUnsplashAction(context))
+                createVisitBlossomAction(context))
     }
 
     private fun createViewProfileAction(context: Context, artwork: Artwork): RemoteActionCompat? {
@@ -58,11 +58,10 @@ class BlossomArtProvider : MuzeiArtProvider() {
                         PendingIntent.FLAG_UPDATE_CURRENT))
     }
 
-    private fun createVisitUnsplashAction(context: Context): RemoteActionCompat {
+    private fun createVisitBlossomAction(context: Context): RemoteActionCompat {
         val title = context.getString(R.string.action_visit_blossom)
-        val unsplashUri = context.getString(R.string.blossom_link) +
-                ATTRIBUTION_QUERY_PARAMETERS
-        val intent = Intent(Intent.ACTION_VIEW, unsplashUri.toUri())
+        val blossomUri = context.getString(R.string.blossom_link)
+        val intent = Intent(Intent.ACTION_VIEW, blossomUri.toUri())
         return RemoteActionCompat(
                 IconCompat.createWithResource(context,
                         com.google.android.apps.muzei.api.R.drawable.muzei_launch_command),
@@ -75,14 +74,6 @@ class BlossomArtProvider : MuzeiArtProvider() {
     }
 
     override fun openFile(artwork: Artwork): InputStream {
-        return super.openFile(artwork).also {
-            artwork.token?.run {
-                try {
-                    BlossomService.trackDownload(this)
-                } catch (e: IOException) {
-                    Log.w(TAG, "Error reporting download to Blossom", e)
-                }
-            }
-        }
+        return super.openFile(artwork)
     }
 }

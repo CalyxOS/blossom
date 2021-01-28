@@ -35,7 +35,7 @@ android {
         minSdkVersion 19
         targetSdkVersion rootProject.ext.targetSdkVersion
 
-        def blossomAuthorityValue = "org.calyxos.blossom"//"com.example.muzei.exampleunsplash"
+        def blossomAuthorityValue = "org.calyxos.blossom"
         manifestPlaceholders = [blossomAuthority: blossomAuthorityValue]
         buildConfigField "String", "BLOSSOM_AUTHORITY", "\"${blossomAuthorityValue}\""
     }
